@@ -7,6 +7,8 @@
 
 Projeto da réplica da 'Home' e de algumas páginas do site 'https://www.cnnbrasil.com.br/' para estudos pro Curso Desenvolvedor Web Full Stack.
 
+<img src="https://github.com/user-attachments/assets/b2b7357a-d680-4e77-a030-6783c7d157b0" alt="Logo CNN">
+
 
 
 
@@ -21,7 +23,7 @@ Projeto da réplica da 'Home' e de algumas páginas do site 'https://www.cnnbras
 O que você aprendeu construindo esse projeto? Quais desafios você enfrentou e como você superou-os?
 
 
-Julio Moreira ~ Aprendi nesse projeto a realizar a construção de um HTML Semântico, utilizando boas práticas e uma estruturação de layout com o CSS3, garantindo não só um design moderno mas responsividade para todos os dispositivos. 
+Julio Moreira ~ Aprendi nesse projeto a realizar a construção de um HTML Semântico, utilizando boas práticas e uma estruturação de layout com o CSS Grid e Flex-box, garantindo um design moderno. 
 
 
 
