@@ -90,6 +90,7 @@ img {
 
 
 
+
 /* ========== HEADER ========== */
 
 .header {
@@ -329,12 +330,16 @@ figcaption {
     color: #33ABE9;
 }
 
-#square-point {
+
+.tecnologias h2::after {
+    content: '';
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 0.5rem;
+    height: 0.5rem;
     background-color: #33ABE9;
+    margin-left: 0.5rem;
 }
+
 
 .tecnologias .noticias-tecnologia {
     display: grid;
