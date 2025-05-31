@@ -68,6 +68,12 @@ textarea:not([rows]) {
 
 /* ========== BASE STYLES ========== */
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0%;
+}
+
 body {
     margin: 0 auto;
     font-family: Poppins, sans-serif;
@@ -77,6 +83,20 @@ img {
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 
+
+.main-container a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+ .main-container a:hover {
+    color: #0A0A0A; /* Cor do hover */
+    text-decoration: underline;
+    text-decoration-color: #0A0A0A;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+ }
 
 
 
@@ -181,19 +201,30 @@ img {
 .main-container {
     max-width: 1440px;
     margin: 0 auto;
-    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
 }
+
+.body-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
 
 /* Layout Grid */
 .flex-items {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    align-items: end;
+    gap: 2rem;
+    align-items: start;
 }
 
 /* Horizontal Line */
 .horizontal-line {
-    margin-top: 2rem;
+    width: 100%;
+    height: 1px;
 }
 
 
@@ -203,19 +234,14 @@ img {
 
 .coluna-esquerda {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    padding: 1rem;
+    gap: 2rem;
 }
 
-
-.coluna-esquerda .destaque-texto {
-    grid-column: 1 / -1;
-}
 
 .coluna-esquerda .destaque-texto h1 {
     font-weight: 700;
-    text-wrap: wrap;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    line-height: 1.2;
 }
 
 .coluna-esquerda .destaque-texto p {
@@ -228,8 +254,8 @@ img {
 .coluna-esquerda .noticias-grid {
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
 
@@ -336,68 +362,73 @@ img {
 
 /* ========== TECNOLOGIA SECTION ========== */
 
+
+
 .tecnologias h2 {
-    display: inline-block;
-    margin-right: 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
     color: #33ABE9;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 
 .tecnologias h2::after {
     content: '';
     display: inline-block;
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 10px;
+    height: 10px;
     background-color: #33ABE9;
-    margin-left: 0.5rem;
+    margin-left: 1rem;
 }
 
-
-.tecnologias .noticias-tecnologia {
+.noticias-tecnologia {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
-.noticias-tecnologia a, img {
-    color: black;
-    transition: 0.3s ease;
-}
-
-.noticias-tecnologia a:hover, img:hover {
-    text-decoration: underline;
-    text-underline-offset: .1rem;
-    transform: scale(1.01);
-}
 
 .noticias-tecnologia figure {
-    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem 0;
+    align-items: flex-start;
+    margin: 0;
 }
 
-.noticias-tecnologia figcaption {
-    padding: 1rem;
-    font-weight: 700;
-    font-size: 0.8rem;
-}
 
-.tecnologias figure img {
-    width: 150px;
-    height: 150px;
+
+
+.noticias-tecnologia img {
+    width: 120px;
+    height: 120px; /* Limita a altura máxima da imagem */
     object-fit: cover;
     border-radius: 0.5rem;
+    flex-shrink: 0.5rem;
+    box-shadow: 0 0px 32px 8px rgba(0, 0, 0, 0.2);
 }
+
+
+
+.noticias-tecnologia figcaption {
+    font-weight: 400;
+    line-height: 1.4;
+    color: #333;
+    padding-left: 1rem;
+}
+
+
+  
+
 
 
 /* ========== FOOTER ========== */
 
 footer {
     background-color: #0A0A0A;
-    margin-top: 2rem;
-    padding: 2rem;
+    margin-top: auto;
+    padding: 2rem 1rem;
+    height: 100%;
 }
 
 .footer-wrapper {
@@ -452,36 +483,10 @@ footer {
 }
 
 
-/* Celulares pequenos (ex: até 480px) */
-@media (max-width: 480px) {
-  /* Exemplo ajustes */
-  .header-wrapper {
-    flex-direction: column;
-    justify-content: space-around;
-    width: 10dvh;
-    height: auto;
-  }
+
   
 
 
-  .flex-items {
-    grid-template-columns: 1fr; /* 1 coluna só */
-    gap: 1rem;
-  }
-
-  .noticias-grid {
-    grid-template-columns: 1fr; /* 1 coluna */
-  }
-
-  .tecnologias .noticias-tecnologia {
-    grid-template-columns: 1fr 1fr; /* 2 colunas */
-  }
-
-  .footer-wrapper  {
-    grid-template-columns: 1fr; /* 1 coluna */
-    justify-items: center;
-    text-align: center;
-  }
-}
+  
 
 
