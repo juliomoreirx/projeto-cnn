@@ -1,47 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
-            padding: 10px;
-        }
-        .grid-item {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 30px;
-        }
-
-        .destaque {
-            background-color: #FF5733; /* Destaque com cor diferente */
-            grid-column: 1 / -1; /* Ocupa duas colunas */
-        }
-    </style>
+    <title>CNN Brasil - Clone</title>
+    <link rel="stylesheet" href="cnn-style.css">
+    <link rel="shortcut icon" href="./assets/img/logo-cnn.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="grid-container">
-        <div class="grid-item destaque">1</div>
-        <div class="grid-item">2</div>
-        <div class="grid-item">3</div>
-        <div class="grid-item">4</div>
-        <div class="grid-item">5</div>
-        <div class="grid-item">6</div>
-        <div class="grid-item">7</div>
-        <div class="grid-item">8</div>
-        <div class="grid-item">9</div>
-        <div class="grid-item">10</div>
-    </div>
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="header-wrapper">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="assets/img/logo-cnn.png" alt="CNN Brasil Logo">
+            </div>
+
+            <!-- Menu de Navegação -->
+            <nav>
+                <ul>
+                    <!-- Indicador "Ao Vivo" -->
+                    <div class="live-cnn">
+                        <div class="outer-circle">
+                            <div class="inner-circle"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Links de Navegação -->
+                    <li><a href="#">Ao Vivo</a></li>
+                    <li><a href="#">Política</a></li>
+                    <li><a href="#">WW</a></li>
+                    <li><a href="#">Economia</a></li>
+                    <li><a href="#">Esportes</a></li>
+                    <li><a href="#">Pop</a></li>
+                    <li><a href="#">Viagem & Gastronomia</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Botões de Ação -->
+            <div class="actions-wrapper">
+                <!-- Botão de Busca -->
+                <button type="submit">
+                    <svg width="1em" height="1em" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" transform="rotate(0)">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g>
+                        <g id="SVGRepo_iconCarrier"> 
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 10.5C15 12.9853 12.9853 15 10.5 15C8.01472 15 6 12.9853 6 10.5C6 8.01472 8.01472 6 10.5 6C12.9853 6 15 8.01472 15 10.5ZM14.1793 15.2399C13.1632 16.0297 11.8865 16.5 10.5 16.5C7.18629 16.5 4.5 13.8137 4.5 10.5C4.5 7.18629 7.18629 4.5 10.5 4.5C13.8137 4.5 16.5 7.18629 16.5 10.5C16.5 11.8865 16.0297 13.1632 15.2399 14.1792L20.0304 18.9697L18.9697 20.0303L14.1793 15.2399Z" fill="#ffffff"></path> 
+                        </g>
+                    </svg>
+                </button>
+                
+                <!-- Separador -->
+                <div class="vertical-separator"></div>
+                
+                <!-- Botão Google -->
+                <button type="button" class="google-button">
+                    <svg width="1em" height="1em" viewBox="-4.8 -4.8 57.60 57.60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0">
+                            <rect x="-4.8" y="-4.8" width="57.60" height="57.60" rx="28.8" fill="#ffffff" strokewidth="0"></rect>
+                        </g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier"> 
+                            <title>Google-color</title> 
+                            <desc>Created with Sketch.</desc> 
+                            <defs> </defs> 
+                            <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> 
+                                <g id="Color-" transform="translate(-401.000000, -860.000000)"> 
+                                    <g id="Google" transform="translate(401.000000, 860.000000)"> 
+                                        <path d="M9.82727273,24 C9.82727273,22.4757333 10.0804318,21.0144 10.5322727,19.6437333 L2.62345455,13.6042667 C1.08206818,16.7338667 0.213636364,20.2602667 0.213636364,24 C0.213636364,27.7365333 1.081,31.2608 2.62025,34.3882667 L10.5247955,28.3370667 C10.0772273,26.9728 9.82727273,25.5168 9.82727273,24" id="Fill-1" fill="#FBBC05"> </path> 
+                                        <path d="M23.7136364,10.1333333 C27.025,10.1333333 30.0159091,11.3066667 32.3659091,13.2266667 L39.2022727,6.4 C35.0363636,2.77333333 29.6954545,0.533333333 23.7136364,0.533333333 C14.4268636,0.533333333 6.44540909,5.84426667 2.62345455,13.6042667 L10.5322727,19.6437333 C12.3545909,14.112 17.5491591,10.1333333 23.7136364,10.1333333" id="Fill-2" fill="#EB4335"> </path> 
+                                        <path d="M23.7136364,37.8666667 C17.5491591,37.8666667 12.3545909,33.888 10.5322727,28.3562667 L2.62345455,34.3946667 C6.44540909,42.1557333 14.4268636,47.4666667 23.7136364,47.4666667 C29.4455,47.4666667 34.9177955,45.4314667 39.0249545,41.6181333 L31.5177727,35.8144 C29.3995682,37.1488 26.7323182,37.8666667 23.7136364,37.8666667" id="Fill-3" fill="#34A853"> </path> 
+                                        <path d="M46.1454545,24 C46.1454545,22.6133333 45.9318182,21.12 45.6113636,19.7333333 L23.7136364,19.7333333 L23.7136364,28.8 L36.3181818,28.8 C35.6879545,31.8912 33.9724545,34.2677333 31.5177727,35.8144 L39.0249545,41.6181333 C43.3393409,37.6138667 46.1454545,31.6490667 46.1454545,24" id="Fill-4" fill="#4285F4"> </path> 
+                                    </g> 
+                                </g> 
+                            </g> 
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-content">
+        <!-- SEÇÃO DE DESTAQUE -->
+        <section class="destaque-section">
+            <div class="destaque-wrapper">
+                <!-- Conteúdo Principal -->
+                <div class="conteudo-principal">
+                    <!-- Manchete Principal -->
+                    <div class="manchete-principal">
+                        <h1>IA não vai substituir programadores iniciantes, diz CEO do Google</h1>
+                        
+                        <!-- Lista de Links Relacionados -->
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <span class="icon-arrow">
+                                        <svg fill="#ff0000" height="1rem" width="1rem" viewBox="0 0 32 32" stroke="#ff0000" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21,2H11c-5,0-9,4-9,9v10c0,5,4,9,9,9h10c5,0,9-4,9-9V11C30,6,26,2,21,2z M19.7,16.7l-5,5C14.5,21.9,14.3,22,14,22
+                                            s-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l4.3-4.3l-4.3-4.3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5,5C20.1,15.7,20.1,16.3,19.7,16.7z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    Curso de programação: 5 opções para estudar em 2025
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon-arrow">
+                                        <svg fill="#ff0000" height="1rem" width="1rem" viewBox="0 0 32 32" stroke="#ff0000" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21,2H11c-5,0-9,4-9,9v10c0,5,4,9,9,9h10c5,0,9-4,9-9V11C30,6,26,2,21,2z M19.7,16.7l-5,5C14.5,21.9,14.3,22,14,22
+                                            s-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l4.3-4.3l-4.3-4.3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5,5C20.1,15.7,20.1,16.3,19.7,16.7z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    Curso Algoritmos e Lógica de Programação 2025
+                                </a>
+                            </li>
+                        </ul>    
+                    </div>
+
+                    <!-- Grid de Notícias -->
+                    <div class="grid-noticias">
+                        <div class="noticia">
+                            <article>
+                                <a href="">
+                                    <figure>
+                                        <img src="https://i.blogs.es/d144e0/original/1200_800.jpeg" alt="'Eu me esconderia da mídia': Bill Gates diz o que faria se CEO da Microsoft trocasse Windows 11 pelo Windows 10">
+                                        <figcaption>"Eu me esconderia da mídia": Bill Gates diz o que faria se CEO da Microsoft trocasse Windows 11 pelo Windows 10</figcaption>
+                                    </figure>
+                                </a>
+                            </article>      
+                        </div>
+
+                        <div class="noticia">
+                            <article>
+                                <a href=""> 
+                                    <figure>
+                                        <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1EYMOl.img" alt="Ex-dev da Naughty Dog ressalta a influência duradoura de Resident Evil 4">
+                                        <figcaption>Ex-dev da Naughty Dog ressalta a influência duradoura de Resident Evil 4</figcaption>
+                                    </figure>
+                                </a>
+                            </article>      
+                        </div>
+
+                        <div class="noticia">
+                            <article>
+                                <a href=""> 
+                                    <figure>
+                                        <img src="https://tm.ibxk.com.br/2024/02/21/21104029198057.jpg" alt="GitHub Copilot agora pode ajudar a programar com IA Claude e Gemini">
+                                        <figcaption>GitHub Copilot agora pode ajudar a programar com IA Claude e Gemini</figcaption>
+                                    </figure>
+                                </a> 
+                            </article>      
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="noticia">
+                        <article>
+                            <a href="">  
+                                <figure>
+                                    <img src="https://tm.ibxk.com.br/2024/11/08/08143049183297.jpg" alt="Algoritmo: o que é, como funciona e quais suas aplicações?">
+                                    <figcaption>Algoritmo: o que é, como funciona e quais suas aplicações?</figcaption>
+                                </figure>
+                            </a>
+                        </article>      
+                    </div>
+
+                    <div class="noticia">
+                        <article>
+                            <a href="">
+                                <figure>
+                                    <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2025/05/30/745241745-13662000.png" alt="Alguém apagou 11 linhas de código Open Source e quebrou a internet; o caso trouxe várias lições que ninguém quis aprender">
+                                    <figcaption>Alguém apagou 11 linhas de código Open Source e quebrou a internet; o caso trouxe várias lições que ninguém quis aprender</figcaption>
+                                </figure>
+                            </a> 
+                        </article>      
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Linha Divisória -->
+        <hr class="horizontal-line">
+
+        <!-- SEÇÃO DE NOTÍCIAS -->
+        <section class="noticias-section">
+            <div class="noticias-wrapper">
+                <!-- Título da Seção -->
+                <div class="titulo-noticia">
+                    <h2>Tecnologias</h2>
+                </div>
+
+                <!-- Grid de Notícias -->
+                <div class="noticias-grid">
+                    <div class="noticia-item-1">
+                        <article>
+                            <a href="">
+                                <figure>
+                                    <img src="https://tm.ibxk.com.br/2023/09/06/06153210996363.jpg" alt="Python: por que a linguagem é tão usada para Data Science e finanças?">
+                                    <figcaption>Python: por que a linguagem é tão usada para Data Science e finanças?</figcaption>
+                                </figure>
+                            </a>
+                        </article>      
+                    </div>
+
+                    <div class="noticia-item-2">
+                        <article>
+                            <a href="">
+                                <figure>
+                                    <img src="https://tm.ibxk.com.br///2023/07/26/26110031907090.jpeg" alt="O que é linguagem de programação? Conheça as principais">
+                                    <figcaption>O que é linguagem de programação? Conheça as principais</figcaption>
+                                </figure>
+                            </a>
+                        </article>      
+                    </div>
+
+                    <div class="noticia-item-3">
+                        <article>
+                            <a href="">
+                                <figure>
+                                    <img src="https://tm.ibxk.com.br/2023/07/12/12115957215144.jpg" alt="GitHub agora permite fazer login sem precisar de senha; entenda">
+                                    <figcaption>GitHub agora permite fazer login sem precisar de senha; entenda</figcaption>
+                                </figure>
+                            </a>
+                        </article>      
+                    </div>
+
+                    <div class="noticia-item-4">
+                        <article>
+                            <a href="">
+                                <figure>
+                                    <img src="https://tm.ibxk.com.br/2023/03/14/14142935355236.jpg" alt="Veja como criar bot no Discord">
+                                    <figcaption>Veja como criar bot no Discord</figcaption>
+                                </figure>
+                            </a>
+                        </article>      
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- RODAPÉ -->
+    <footer>
+        <section>
+            <div class="footer-wrapper">
+                <!-- Logo do Rodapé -->
+                <div class="logo-footer">
+                    <img src="./assets/img/logo-cnn.png" alt="CNN Brasil Logo">
+                </div>
+
+                <!-- Menu Nacional -->
+                <div class="nacional">
+                    <ul>
+                        <strong>Nacional</strong>
+                        <li><a href="">Educação</a></li>
+                        <li><a href="">Segurança</a></li>
+                        <li><a href="">Clima</a></li>
+                        <li><a href="">Meio Ambiente</a></li>
+                    </ul>
+                </div>
+
+                <!-- Menu Político -->
+                <div class="politica">
+                    <ul>
+                        <strong>Índice CNN</strong>
+                        <li><a href="">Governo Lula</a></li>
+                        <li><a href="">Câmara dos Deputados</a></li>
+                        <li><a href="">Senado Federal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Menu Editorias -->
+                <div class="editorias">
+                    <ul>
+                        <strong>Editorias</strong>
+                        <li><a href="">Ao Vivo</a></li>
+                        <li><a href="">Política</a></li>
+                        <li><a href="">Nacional</a></li>
+                        <li><a href="">Economia</a></li>
+                    </ul>
+                </div>
+
+                <!-- Copyright -->
+                <div class="copyright">
+                    <span>Todos os Direitos Reservados &copy; CNN 2025</span>
+                </div>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
