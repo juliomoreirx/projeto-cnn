@@ -1,0 +1,264 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #000000;
+  border-bottom: 1px solid #ddd;
+
+  margin-bottom: 20px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cnn-logo-img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 5px 0;
+  padding-bottom: 18px;
+}
+
+header nav ul li a:hover {
+  border-bottom: 4px solid #ff0000;
+}
+
+main.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content {
+  float: left;
+  width: 65%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.featured-article h1 {
+  font-size: 32px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.featured-article .subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.featured-article .author {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.featured-article img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.article-body p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.article-body .highlight {
+  font-weight: bold;
+  color: #cc0000;
+}
+
+.sidebar {
+  float: right;
+  width: 32%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+  font-size: 15px;
+  color: #e21717;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.aovivo {
+  color: #e21717;
+  margin-right: 5px;
+}
+
+.image-with-number {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.sidebar .number {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: #cc0000;
+  padding: 4px 6px;
+  z-index: 10;
+  line-height: 1;
+}
+
+.sidebar ul .first-sidebar-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(227, 222, 222);
+}
+
+.sidebar .first-sidebar-item .image-with-number {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.sidebar .first-sidebar-item .image-with-number img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #ddd;
+}
+
+.sidebar .first-sidebar-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: bold;
+  display: block;
+}
+
+.sidebar .news-item-small {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border-bottom: 1px solid rgb(227, 222, 222);
+}
+
+.sidebar .news-item-small .image-with-number img {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #eee;
+  flex-shrink: 0;
+}
+
+.sidebar .news-item-small a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.sidebar ul li a:hover {
+  color: #cc0000;
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  color: #eee;
+  padding: 30px 0;
+  margin-top: 30px;
+  clear: both;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cnn-logo-footer-img {
+  height: 80px;
+  width: auto;
+  display: block;
+}
+
+.footer-links {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-links .column h3 {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.footer-links .column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links .column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links .column ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.footer-links .column ul li a:hover {
+  color: #fff;
+}
