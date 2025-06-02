@@ -8,17 +8,13 @@ body {
     flex-direction: column;
 }
 
-a {
-    text-decoration: none;
+
+img {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-a:hover {
-    color: #0A0A0A;
-    text-decoration: underline;
-    text-decoration-color: #0A0A0A;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 4px;
-}
+
+
 
 /* ===== CABEÇALHO ===== */
 header {
@@ -148,8 +144,23 @@ header a:hover {
 
 /* Manchete Principal */
 .manchete-principal {
+    
     margin-bottom: 2rem;
 }
+
+.manchete-principal a {
+    text-decoration: none;
+}
+
+.manchete-principal a>h1 {
+    
+    color: #040404;
+}
+
+.manchete-principal a>h1:hover {
+    color: #cc0000;
+}
+
 
 .manchete-principal h1 {
     font-size: 2.2rem;  
@@ -168,8 +179,8 @@ header a:hover {
 }
 
 .manchete-principal li a:hover {
-    text-decoration: underline;
-    color: #040404;
+    
+    color: #cc0000;
 }
 
 .icon-arrow {
@@ -185,10 +196,12 @@ header a:hover {
 }
 
 .grid-noticias a {
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     height: 16rem;
 }
+
 
 .grid-noticias figure {
     margin: 0;
@@ -210,6 +223,12 @@ header a:hover {
     font-size: 0.9rem;
     color: #333;
 }
+
+.grid-noticias figcaption:hover {
+    color: #cc0000;
+}
+
+
 
 /* Sidebar */
 .sidebar {
@@ -234,11 +253,19 @@ header a:hover {
     border-radius: 8px;
 }
 
+.sidebar a {
+    text-decoration: none;
+}
+
 .sidebar figcaption {
     font-size: 0.9rem;
     color: #333;
     margin-top: 0.5rem;
     width: 100%;
+}
+
+.sidebar figcaption:hover {
+    color: #cc0000;
 }
 
 /* Linha Divisória */
@@ -254,7 +281,7 @@ header a:hover {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #040404;
+    color: #59BBF5;
 }
 
 .titulo-noticia h2::after {
@@ -262,7 +289,7 @@ header a:hover {
     display: inline-block;
     width: 0.5rem;
     height: 0.5rem;
-    background-color: #CC0000;
+    background-color: #59BBF5;
     margin-top: 0.5rem;
     margin-left: 0.5rem;
 }
@@ -288,12 +315,21 @@ header a:hover {
     border-radius: 8px;
 }
 
+.noticias-grid a {
+    text-decoration: none;
+}
+
 .noticias-grid figcaption {
+    
     width: 100%;
     margin-left: 1rem;
     font-weight: 500;
     font-size: 0.9rem;
     color: #333;
+}
+
+.noticias-grid figcaption:hover {
+    color: #cc0000;
 }
 
 /* ===== RODAPÉ ===== */
