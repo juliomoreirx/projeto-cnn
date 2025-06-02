@@ -32,6 +32,9 @@ Julio Moreira ~ Aprendi nesse projeto a realizar a construção de um HTML Semâ
 
 Front-end
 - [@juliomoreirx](https://www.github.com/juliomoreirx)
+- [@esgo-design](https://github.com/esgo-design)
+
+
 
 
 
