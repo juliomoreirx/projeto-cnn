@@ -7,11 +7,11 @@
 
 Projeto da réplica da 'Home' e de algumas páginas do site 'https://www.cnnbrasil.com.br/' utilizando somente HTML e CSS para estudos pro Curso Desenvolvedor Web Full Stack ~ Módulo CSS.
 
-<img src="https://github.com/user-attachments/assets/b2b7357a-d680-4e77-a030-6783c7d157b0" alt="Logo CNN">
+<img src="https://github.com/user-attachments/assets/3c5a6bd8-7d5c-40d1-997b-2a41355b90c1" alt="Logo CNN">
 
 
 
-
+https://github.com/user-attachments/assets/3c5a6bd8-7d5c-40d1-997b-2a41355b90c1
 ## Stack utilizada
 
 **Front-end:** HTML e CSS.
