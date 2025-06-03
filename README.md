@@ -10,8 +10,6 @@ Projeto da réplica da 'Home' e de algumas páginas do site 'https://www.cnnbras
 <img src="https://github.com/user-attachments/assets/3c5a6bd8-7d5c-40d1-997b-2a41355b90c1" alt="Logo CNN">
 
 
-
-https://github.com/user-attachments/assets/3c5a6bd8-7d5c-40d1-997b-2a41355b90c1
 ## Stack utilizada
 
 **Front-end:** HTML e CSS.
