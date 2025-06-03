@@ -192,6 +192,7 @@ header a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    row-gap: 6rem;
     align-self: end;
 }
 
@@ -273,7 +274,7 @@ header a:hover {
     border: none;
     height: 1px;
     background: linear-gradient(90deg, transparent, #040404, transparent);
-    margin: 2rem 0;
+    margin-top: 6rem;
 }
 
 /* ===== SEÇÃO DE NOTÍCIAS ===== */
@@ -401,4 +402,107 @@ footer {
     justify-self: center;
     align-self: center;
     margin-top: 1rem;
+}
+
+
+
+
+/* Desktop 1440px + */
+
+@media (min-width: 1441px) {
+    .main-content, .header-wrapper, .footer-wrapper {
+        max-width: 1440px;
+    }
+}
+
+
+/* Desktop Padrao 1024px - 1440px */
+
+@media (max-width: 1440px) {
+    .main-content, .header-wrapper, .footer-wrapper {
+        width: 90%;
+        padding: 0 2rem;
+    }
+    
+    .grid-noticias {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 7rem;
+    }
+
+    .noticias-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar figcaption {
+        font-size: 1.1rem;
+    }
+
+    .grid-noticias figcaption {
+        font-size: 1.1rem;
+    }
+    
+    
+    .noticias-grid figcaption {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media (max-width: 1023px) {
+
+    /* .main-content, .header-wrapper, .footer-wrapper {
+        width: 50%;
+        padding: 0 2rem;
+    } */
+
+
+    .header-wrapper {
+        font-size: 0.8rem;
+    }
+
+    .destaque-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .sidebar {
+        margin-top: 4rem;
+    }
+
+    .sidebar figcaption {
+        font-size: 1.1rem;
+    }
+
+    .grid-noticias {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-noticias figcaption {
+        font-size: 1.1rem;
+    }
+    
+    .noticias-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .noticias-grid figcaption {
+        font-size: 1.1rem;
+    }
+
+    .footer-wrapper {
+        gap: 1rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50px 1fr 1fr 1fr;
+        justify-items: end;
+        align-items: center;
+    }
+
+    .grid-noticias a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        height: 32rem;
+    }
+
 }
